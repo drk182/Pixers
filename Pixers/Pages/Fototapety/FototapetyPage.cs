@@ -20,6 +20,8 @@ namespace Pixers.Pages.Fototapety
 
         public FototapetyPage SearchFototapeta()
         {
+            ClosePopUpIfVisible();
+
             const string url = "szukaj";
 
             SearchInPixers(Configuration.GetFototapeta);
