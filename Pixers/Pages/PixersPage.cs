@@ -10,6 +10,10 @@ namespace Pixers.Pages
 {
     public abstract class PixersPage : Driver
     {
+        private static By _searchBox = By.Name("q");
+
+        private static By _searchClick = By.ClassName("fa fa-search");
+
         protected PixersPage(IWebDriver driver)
         {
             Instance = driver;
@@ -77,6 +81,25 @@ namespace Pixers.Pages
             var myElement = wait.Until(x => x.FindElement(locator));
 
             return myElement;
+        }
+
+        public static void SearchInPixers(string query)
+        {
+            InsertText(_searchBox, query);
+            Click(_searchClick);
+        }
+
+        public void WaitUntilUrlContains(string value)
+        {
+            try
+            {
+                var wait = new WebDriverWait(Instance, TimeSpan.FromSeconds(5));
+                wait.Until(ExpectedConditions.UrlContains(value));
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Url strony nie zawiera ciągu [{0}].", value);
+            }
         }
     }
 }

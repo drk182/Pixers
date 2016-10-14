@@ -10,7 +10,7 @@ namespace Pixers.Navigation
 {
     public class LinkMenu
     {
-        private static By _fototapetyLink = By.CssSelector("a[href*='/fototapety']");
+        private static By _fototapetyLink = By.XPath("//*[@id='mainmenu--block']/nav/div/div[1]/ul/li[1]");
 
         private static By _obrazyiplakatyLink = By.CssSelector("a[href*='/obrazy-i-plakaty']");
 
