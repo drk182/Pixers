@@ -7,6 +7,7 @@ namespace Pixers.Core
         private const string LoginKey = "Login";
         private const string PasswordKey = "Password";
         private const string BaseAddressKey = "BaseAddress";
+        private const string Fototapeta = "Fototapeta - Grunwaldzki bridge in wroclaw";
 
         public static string GetUserLogin
         {
@@ -23,5 +24,9 @@ namespace Pixers.Core
             get { return ConfigurationManager.AppSettings[BaseAddressKey]; }
         }
 
+        public static string GetFototapeta
+        {
+            get { return ConfigurationManager.AppSettings[Fototapeta]; }
+        }
     }
 }

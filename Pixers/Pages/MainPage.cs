@@ -2,6 +2,7 @@
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using Pixers.Core;
+using Pixers.Navigation;
 
 namespace Pixers.Pages
 {
@@ -9,8 +10,27 @@ namespace Pixers.Pages
     {
         private static By _mainLogo = By.ClassName("logo");
 
-        public MainPage(ChromeDriver driver) : base(driver)
+        public MainPage(IWebDriver driver) : base(driver)
         {
+        }
+
+        public static void GoTo(MainPageLinkType mainType)
+        {
+            switch (mainType)
+            {
+                case MainPageLinkType.Fototapety:
+                    LinkMenu.MainMenu.Fototapety.Select();
+                    break;
+                case MainPageLinkType.Naklejki:
+                    LinkMenu.MainMenu.Naklejki.Select();
+                    break;
+                case MainPageLinkType.ObrazyIPlakaty:
+                    LinkMenu.MainMenu.ObrazyIPlakaty.Select();
+                    break;
+                case MainPageLinkType.ZTwojegoZdjecia:
+                    LinkMenu.MainMenu.ZTwojegoZdjecia.Select();
+                    break;
+            }
         }
 
         public static void OpenMainPage()
