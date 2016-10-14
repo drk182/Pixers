@@ -1,0 +1,5 @@
+C:\Users\drk182\Documents\GitHub\Pixers\Pixers.Core\bin\Debug\Pixers.Core.dll
+C:\Users\drk182\Documents\GitHub\Pixers\Pixers.Core\bin\Debug\Pixers.Core.pdb
+C:\Users\drk182\Documents\GitHub\Pixers\Pixers.Core\obj\Debug\Pixers.Core.csprojResolveAssemblyReference.cache
+C:\Users\drk182\Documents\GitHub\Pixers\Pixers.Core\obj\Debug\Pixers.Core.dll
+C:\Users\drk182\Documents\GitHub\Pixers\Pixers.Core\obj\Debug\Pixers.Core.pdb

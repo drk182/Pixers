@@ -1,0 +1,17 @@
+C:\Users\drk182\Documents\GitHub\Pixers\PixersTests\obj\Debug\PixersTests.csprojResolveAssemblyReference.cache
+C:\Users\drk182\Documents\GitHub\Pixers\PixersTests\bin\Debug\PixersTests.dll.config
+C:\Users\drk182\Documents\GitHub\Pixers\PixersTests\bin\Debug\PixersTests.dll
+C:\Users\drk182\Documents\GitHub\Pixers\PixersTests\bin\Debug\PixersTests.pdb
+C:\Users\drk182\Documents\GitHub\Pixers\PixersTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\drk182\Documents\GitHub\Pixers\PixersTests\bin\Debug\nunit.framework.dll
+C:\Users\drk182\Documents\GitHub\Pixers\PixersTests\bin\Debug\Pixers.Core.dll
+C:\Users\drk182\Documents\GitHub\Pixers\PixersTests\bin\Debug\Pixers.dll
+C:\Users\drk182\Documents\GitHub\Pixers\PixersTests\bin\Debug\WebDriver.dll
+C:\Users\drk182\Documents\GitHub\Pixers\PixersTests\bin\Debug\WebDriver.Support.dll
+C:\Users\drk182\Documents\GitHub\Pixers\PixersTests\bin\Debug\Pixers.Core.pdb
+C:\Users\drk182\Documents\GitHub\Pixers\PixersTests\bin\Debug\Pixers.pdb
+C:\Users\drk182\Documents\GitHub\Pixers\PixersTests\bin\Debug\nunit.framework.xml
+C:\Users\drk182\Documents\GitHub\Pixers\PixersTests\bin\Debug\WebDriver.xml
+C:\Users\drk182\Documents\GitHub\Pixers\PixersTests\bin\Debug\WebDriver.Support.xml
+C:\Users\drk182\Documents\GitHub\Pixers\PixersTests\obj\Debug\PixersTests.dll
+C:\Users\drk182\Documents\GitHub\Pixers\PixersTests\obj\Debug\PixersTests.pdb

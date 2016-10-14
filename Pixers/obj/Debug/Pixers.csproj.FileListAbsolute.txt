@@ -1,0 +1,11 @@
+C:\Users\drk182\Documents\GitHub\Pixers\Pixers\obj\Debug\Pixers.csprojResolveAssemblyReference.cache
+C:\Users\drk182\Documents\GitHub\Pixers\Pixers\bin\Debug\Pixers.dll
+C:\Users\drk182\Documents\GitHub\Pixers\Pixers\bin\Debug\Pixers.pdb
+C:\Users\drk182\Documents\GitHub\Pixers\Pixers\bin\Debug\Pixers.Core.dll
+C:\Users\drk182\Documents\GitHub\Pixers\Pixers\bin\Debug\WebDriver.dll
+C:\Users\drk182\Documents\GitHub\Pixers\Pixers\bin\Debug\WebDriver.Support.dll
+C:\Users\drk182\Documents\GitHub\Pixers\Pixers\bin\Debug\Pixers.Core.pdb
+C:\Users\drk182\Documents\GitHub\Pixers\Pixers\bin\Debug\WebDriver.xml
+C:\Users\drk182\Documents\GitHub\Pixers\Pixers\bin\Debug\WebDriver.Support.xml
+C:\Users\drk182\Documents\GitHub\Pixers\Pixers\obj\Debug\Pixers.dll
+C:\Users\drk182\Documents\GitHub\Pixers\Pixers\obj\Debug\Pixers.pdb

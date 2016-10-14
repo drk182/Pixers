@@ -1,20 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 
 namespace Pixers.Selenium
 {
     public class Driver
     {
-        public static FirefoxDriver Instance { get; set; }
+        public static IWebDriver Instance { get; set; }
+        
+        private const string Path = @"D:\drivers";
 
         public static void Initialize()
         {
-            Instance = new FirefoxDriver();
+            Instance = new ChromeDriver(Path);
+            Instance.Manage().Window.Maximize();
         }
 
         public static void Close()
