@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using Pixers.Pages;
 
-namespace PixersTests
+namespace PixersTests.Tests
 {
     [TestFixture]
     public class MainPageTests : Utilities.PixersTests

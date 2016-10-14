@@ -68,6 +68,26 @@ namespace Pixers.Pages
             }
         }
 
+        public static string GetValue(By locator)
+        {
+            var attempts = 0;
+
+            while (attempts < 3)
+            {
+                try
+                {
+                    var value = Instance.FindElement(locator).Text;
+                    return value;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("\nException type: [{0}], attempt: [{1}] in GetValue( [{2}] ) \n", e.GetType().Name, attempts + 1, locator);
+                }
+                attempts++;
+            }
+            return String.Empty;
+        }
+
         public static void WaitAndClick(By locator, int timeOutInSeconds = 3)
         {
             Instance.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(timeOutInSeconds));
@@ -108,13 +128,16 @@ namespace Pixers.Pages
 
         public void ClosePopUpIfVisible()
         {
-            var popup = FindElement(_popUp);
-            if (popup.Displayed)
+            try
             {
+                var popup = FindElement(_popUp);
                 Click(_popUpCloseButton);
+                WaitUntilElementIsVisible(_popUp);
             }
-
-            WaitUntilElementIsVisible(_popUp);
+            catch (Exception e)
+            {
+                // ignored
+            }
         }
 
         public void WaitUntilElementIsVisible(By locator, int timeout = 5)

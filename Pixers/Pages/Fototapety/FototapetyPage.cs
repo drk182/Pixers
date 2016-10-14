@@ -43,5 +43,12 @@ namespace Pixers.Pages.Fototapety
 
             return product.Displayed;
         }
+
+        public static bool IsBestsellerPage()
+        {
+            var presentationHeader = FindElement(By.ClassName("content__presentation-header"));
+
+            return presentationHeader.Text.Contains("Bestseller");
+        }
     }
 }

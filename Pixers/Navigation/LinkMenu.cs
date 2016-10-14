@@ -10,7 +10,9 @@ namespace Pixers.Navigation
 {
     public class LinkMenu
     {
-        private static By _fototapetyLink = By.XPath("//*[@id='mainmenu--block']/nav/div/div[1]/ul/li[1]");
+        private static By _fototapetyLink = By.CssSelector("a[href='/fototapety']");
+
+        private static By _fototapetyBestseller = By.CssSelector("a[href='http://pixers.pl/fototapety/bestsellery']");
 
         private static By _obrazyiplakatyLink = By.CssSelector("a[href*='/obrazy-i-plakaty']");
 
@@ -26,6 +28,19 @@ namespace Pixers.Navigation
                 {
                     MenuSelector.Select(_fototapetyLink);
                 }
+
+                public static void Hover()
+                {
+                    MenuSelector.Hover((_fototapetyLink));
+                }
+
+                public class Bestseller
+                {
+                    public static void Select()
+                    {
+                        MenuSelector.Select(_fototapetyBestseller);
+                    }
+                }
             }
 
             public class ObrazyIPlakaty
@@ -33,7 +48,7 @@ namespace Pixers.Navigation
                 public static void Select()
                 {
                     MenuSelector.Select(_obrazyiplakatyLink);
-                } 
+                }
             }
 
             public class Naklejki

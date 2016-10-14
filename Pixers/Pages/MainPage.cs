@@ -30,6 +30,10 @@ namespace Pixers.Pages
                 case MainPageLinkType.ZTwojegoZdjecia:
                     LinkMenu.MainMenu.ZTwojegoZdjecia.Select();
                     break;
+                case MainPageLinkType.FototapetyBestseller:
+                    LinkMenu.MainMenu.Fototapety.Hover();
+                    LinkMenu.MainMenu.Fototapety.Bestseller.Select();
+                    break;
             }
         }
 

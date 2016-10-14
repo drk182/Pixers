@@ -6,5 +6,6 @@
         ObrazyIPlakaty = 1,
         Naklejki = 2,
         ZTwojegoZdjecia = 3,
+        FototapetyBestseller = 4
     }
 }
