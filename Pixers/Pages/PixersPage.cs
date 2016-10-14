@@ -4,6 +4,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
+using Pixers.Core;
 using Pixers.Selenium;
 
 namespace Pixers.Pages
@@ -11,8 +12,10 @@ namespace Pixers.Pages
     public abstract class PixersPage : Driver
     {
         private static By _searchBox = By.Name("q");
+        
+        private static By _popUp = By.Id("newsletter_popup");
 
-        private static By _searchClick = By.ClassName("fa fa-search");
+        private static By _popUpCloseButton = By.ClassName("close-reveal-modal");
 
         protected PixersPage(IWebDriver driver)
         {
@@ -85,8 +88,9 @@ namespace Pixers.Pages
 
         public static void SearchInPixers(string query)
         {
-            InsertText(_searchBox, query);
-            Click(_searchClick);
+            var searchBox = FindElement(_searchBox);
+            searchBox.SendKeys(Configuration.GetFototapeta);
+            searchBox.SendKeys(Keys.Enter);
         }
 
         public void WaitUntilUrlContains(string value)
@@ -98,8 +102,24 @@ namespace Pixers.Pages
             }
             catch (Exception)
             {
-                Console.WriteLine("Url strony nie zawiera ciągu [{0}].", value);
+                Console.WriteLine("Url does not contain string [{0}].", value);
             }
+        }
+
+        public void ClosePopUpIfVisible()
+        {
+            var popup = FindElement(_popUp);
+            if (popup.Displayed)
+            {
+                Click(_popUpCloseButton);
+            }
+
+            WaitUntilElementIsVisible(_popUp);
+        }
+
+        public void WaitUntilElementIsVisible(By locator, int timeout = 5)
+        {
+            new WebDriverWait(Instance, TimeSpan.FromSeconds(timeout)).Until(ExpectedConditions.ElementExists(locator));
         }
     }
 }
