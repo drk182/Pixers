@@ -25,5 +25,18 @@ namespace PixersTests.Tests
 
             Assert.IsTrue(FototapetyPage.IsBestsellerPage(), "Nie wyświetlono strony z najpopularniejszymi produktami w kategorii Fototapety.");
         }
+
+        [Test]
+        public static void ShouldAddProductToBasket()
+        {
+            ShouldSearchAndDisplayFototapeta();
+
+            var fototapeta = new FototapetyPage();
+
+            fototapeta.AddToBasket()
+                .GoToBasket();
+
+            Assert.Greater(fototapeta.ProductQuantityInBasket(), 0);
+        }
     }
 }

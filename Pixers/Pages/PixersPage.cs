@@ -39,7 +39,7 @@ namespace Pixers.Pages
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("\nException type: [{0}], attempt: [{1}] in Click( [{2}] ) \n", e.GetType().Name, attempts + 1, locator);
+                    Console.WriteLine("Exception type: [{0}], attempt: [{1}] in Click( [{2}] ) ", e.GetType().Name, attempts + 1, locator);
                 }
                 attempts++;
             }
@@ -62,7 +62,7 @@ namespace Pixers.Pages
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("\nException type: [{0}], attempt: [{1}] in InsertText( [{2}] ) \n", e.GetType().Name, attempts + 1, locator);
+                    Console.WriteLine("Exception type: [{0}], attempt: [{1}] in InsertText( [{2}] ) ", e.GetType().Name, attempts + 1, locator);
                 }
                 attempts++;
             }
@@ -81,11 +81,17 @@ namespace Pixers.Pages
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("\nException type: [{0}], attempt: [{1}] in GetValue( [{2}] ) \n", e.GetType().Name, attempts + 1, locator);
+                    Console.WriteLine("Exception type: [{0}], attempt: [{1}] in GetValue( [{2}] ) ", e.GetType().Name, attempts + 1, locator);
                 }
                 attempts++;
             }
-            return String.Empty;
+            return string.Empty;
+        }
+
+        public static void WaitForElementClickable(By locator, int timeOutInSeconds = 3)
+        {
+            var wait = new WebDriverWait(Instance, TimeSpan.FromSeconds(timeOutInSeconds));
+            wait.Until(ExpectedConditions.ElementToBeClickable(locator));
         }
 
         public static void WaitAndClick(By locator, int timeOutInSeconds = 3)
@@ -142,7 +148,8 @@ namespace Pixers.Pages
 
         public void WaitUntilElementIsVisible(By locator, int timeout = 5)
         {
-            new WebDriverWait(Instance, TimeSpan.FromSeconds(timeout)).Until(ExpectedConditions.ElementExists(locator));
+            var wait = new WebDriverWait(Instance, TimeSpan.FromSeconds(timeout));
+            wait.Until(ExpectedConditions.ElementExists(locator));
         }
     }
 }
