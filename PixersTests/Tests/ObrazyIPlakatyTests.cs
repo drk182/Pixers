@@ -1,4 +1,7 @@
 ﻿using NUnit.Framework;
+using Pixers.Navigation;
+using Pixers.Pages;
+using Pixers.Pages.ObrazyIPlakaty;
 
 namespace PixersTests.Tests
 {
@@ -6,9 +9,14 @@ namespace PixersTests.Tests
     public class ObrazyIPlakatyTests : Utilities.PixersTests
     {
         [Test]
-        public static void Should()
+        public static void ShouldOpenMaterialFilterCategory()
         {
-            
+            MainPage.GoTo(MainPageLinkType.ObrazyIPlakatyTematy);
+
+            var obrazy = new ObrazyIPlakatyPage();
+            obrazy.CheckMaterialFilterCetegory();
+
+            Assert.IsTrue(obrazy.IsMaterialFilterCategoryChecked(), "Kategoria nie została zaznaczona.");
         }
     }
 }

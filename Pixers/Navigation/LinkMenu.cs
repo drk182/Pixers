@@ -16,6 +16,8 @@ namespace Pixers.Navigation
 
         private static By _obrazyiplakatyLink = By.CssSelector("a[href*='/obrazy-i-plakaty']");
 
+        private static By _obraziplakatyTematy = By.CssSelector("a[href='/obrazy-i-plakaty/tematy']");
+
         private static By _naklejkiLink = By.CssSelector("a[href*='/naklejki']");
 
         private static By _ztwojegozdjeciaLink = By.CssSelector("a[href*='/z-twojego-zdjecia']");
@@ -48,6 +50,19 @@ namespace Pixers.Navigation
                 public static void Select()
                 {
                     MenuSelector.Select(_obrazyiplakatyLink);
+                }
+
+                public static void Hover()
+                {
+                    MenuSelector.Hover(_obrazyiplakatyLink);
+                }
+
+                public class Tematy
+                {
+                    public static void Select()
+                    {
+                        MenuSelector.Select(_obraziplakatyTematy);
+                    }
                 }
             }
 

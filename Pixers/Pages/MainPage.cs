@@ -34,6 +34,10 @@ namespace Pixers.Pages
                     LinkMenu.MainMenu.Fototapety.Hover();
                     LinkMenu.MainMenu.Fototapety.Bestseller.Select();
                     break;
+                case MainPageLinkType.ObrazyIPlakatyTematy:
+                    LinkMenu.MainMenu.ObrazyIPlakaty.Hover();
+                    LinkMenu.MainMenu.ObrazyIPlakaty.Tematy.Select();
+                    break;
             }
         }
 
