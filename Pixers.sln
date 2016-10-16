@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pixers", "Pixers\Pixers.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pixers.Core", "Pixers.Core\Pixers.Core.csproj", "{5B42B05E-8178-440E-8FCE-5796E66327A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PixersTests", "PixersTests\PixersTests.csproj", "{E6982A8C-8B51-44C1-AECC-F6DE7D1AB368}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pixers.Tests", "PixersTests\Pixers.Tests.csproj", "{E6982A8C-8B51-44C1-AECC-F6DE7D1AB368}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

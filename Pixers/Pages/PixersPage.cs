@@ -28,7 +28,7 @@ namespace Pixers.Pages
             {
                 try
                 {
-                    ////TODO: zastanowić się czy nie dać jednak wait for element is clickable?
+                    ////TODO: zastanowić się czy nie dać jednak wait for element is clickable do każdego clicka?
                     Instance.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(1));
                     var element = Instance.FindElement(locator);
                     element.Click();

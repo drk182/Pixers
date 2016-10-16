@@ -1,4 +1,6 @@
-﻿using OpenQA.Selenium;
+﻿using System;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 
 namespace Pixers.Pages.ObrazyIPlakaty
 {
@@ -23,6 +25,16 @@ namespace Pixers.Pages.ObrazyIPlakaty
             var materialFilterCheckbox = FindElement(_materialFilter);
 
             return materialFilterCheckbox.Selected;
+        }
+
+        public void GetAndShowAllVisibleProductTitle()
+        {
+            var listProduct = Instance.FindElements(By.ClassName("list-product-link"));
+
+            for (int i = 0; i < listProduct.Count; i++)
+            {
+                Console.WriteLine(listProduct[i].GetAttribute("title"));
+            }
         }
     }
 }
