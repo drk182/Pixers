@@ -1,8 +1,5 @@
 ﻿using System;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using Pixers.Core;
 using Pixers.Selenium;
@@ -31,6 +28,7 @@ namespace Pixers.Pages
             {
                 try
                 {
+                    ////TODO: zastanowić się czy nie dać jednak wait for element is clickable?
                     Instance.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(1));
                     var element = Instance.FindElement(locator);
                     element.Click();
@@ -92,16 +90,6 @@ namespace Pixers.Pages
         {
             var wait = new WebDriverWait(Instance, TimeSpan.FromSeconds(timeOutInSeconds));
             wait.Until(ExpectedConditions.ElementToBeClickable(locator));
-        }
-
-        public static void WaitAndClick(By locator, int timeOutInSeconds = 3)
-        {
-            Instance.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(timeOutInSeconds));
-
-            var actions = new Actions(Instance);
-            var myDynamicElement = Instance.FindElement(locator);
-
-            actions.MoveToElement(myDynamicElement).Click().Perform();
         }
 
         public static IWebElement FindElement(By locator)

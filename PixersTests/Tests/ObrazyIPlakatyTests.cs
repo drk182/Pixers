@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using Pixers.Navigation;
 using Pixers.Pages;
 using Pixers.Pages.ObrazyIPlakaty;
 

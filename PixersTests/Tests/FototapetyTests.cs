@@ -36,7 +36,7 @@ namespace PixersTests.Tests
             fototapeta.AddToBasket()
                 .GoToBasket();
 
-            Assert.Greater(fototapeta.ProductQuantityInBasket(), 0);
+            Assert.Greater(fototapeta.ProductQuantityInBasket(), 0, "W koszyku nie ma żadnego produktu.");
         }
     }
 }
